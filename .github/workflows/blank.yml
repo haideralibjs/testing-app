@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
      NAME: 'haider ali'
+     BRANCH: '${{ GITHUB_REF_NAME }}'
 
     steps:
       - name: Checkout code
@@ -34,6 +35,7 @@ jobs:
             echo "haider ali"
             echo "$Name"
             echo "${{ env.NAME }}"
+            echo "${{ env.BRANCH }}"
             echo "Deploying branch: ${{ env.BRANCH_NAME }}"
             echo "End"
             
