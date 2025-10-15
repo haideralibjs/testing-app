@@ -17,6 +17,11 @@ jobs:
         id: vars
         run: |
           echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+          echo "Actor is $GITHUB_ACTOR"
+          echo "Actor is ${{ github.actor }}"
+          
+     
+
       
           
       - name: SSH and Deploy
