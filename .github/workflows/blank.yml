@@ -3,7 +3,7 @@ name: Deploy Frontend via SSH
 on:
   push:
     branches:
-      - catering-implementation
+      - main
 
 jobs:
   deploy-frontend:
