@@ -32,7 +32,7 @@ jobs:
           script: |
             set -e
             echo "haider ali"
-            ehco "$Name"
+            echo "$Name"
             echo "${{ env.NAME }}"
             echo "Deploying branch: ${{ env.BRANCH_NAME }}"
             echo "End"
