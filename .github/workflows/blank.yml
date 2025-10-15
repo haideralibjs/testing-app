@@ -12,13 +12,12 @@ jobs:
      NAME: 'haider ali'
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      
       - name: Get branch name
         id: vars
         run: |
           echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+      
           
       - name: SSH and Deploy
         uses: appleboy/ssh-action@v1.0.0
@@ -32,10 +31,6 @@ jobs:
           script: |
             set -e
             echo "haider ali"
-            echo "$Name"
-            echo "${{ env.NAME }}"
-            echo "${{ GITHUB_REF_NAME }}"
-            echo "${{ env.BRANCH }}"
             echo "Deploying branch: ${{ env.BRANCH_NAME }}"
             echo "End"
             
