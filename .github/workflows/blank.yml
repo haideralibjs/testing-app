@@ -16,11 +16,8 @@ jobs:
       - name: Get branch name
         id: vars
         run: |
-          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-          echo "Actor is $GITHUB_ACTOR"
-          echo "$NAME"
           echo "${{ env.GITHUB_ACTOR }}"
-          echo "Actor is ${{ github.actor }}"
+      
           
      
 
