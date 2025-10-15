@@ -1,0 +1,25 @@
+name: Deploy Frontend via SSH
+
+on:
+  push:
+    branches:
+      - catering-implementation
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH and Deploy
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          timeout: 120m
+          command_timeout: 60m
+          
+          script: |
+            set -e
+            echo "haider ali"
+            
