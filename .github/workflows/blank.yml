@@ -16,7 +16,7 @@ jobs:
       - name: Get branch name
         id: vars
         run: |
-          echo "${{ env.GITHUB_ACTOR }}"
+          env
       
           
      
