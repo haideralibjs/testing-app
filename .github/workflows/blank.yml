@@ -30,6 +30,6 @@ jobs:
           script: |
             set -e
             echo "haider ali"
-            echo "Deploying branch: $BRANCH_NAME"
+            echo "Deploying branch: ${{ env.BRANCH_NAME }}"
             echo "End"
             
