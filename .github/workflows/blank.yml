@@ -8,6 +8,8 @@ on:
 jobs:
   deploy-frontend:
     runs-on: ubuntu-latest
+    env:
+     Name: 'haider ali'
 
     steps:
       - name: Checkout code
@@ -30,6 +32,7 @@ jobs:
           script: |
             set -e
             echo "haider ali"
+            echo $Name
             echo "Deploying branch: ${{ env.BRANCH_NAME }}"
             echo "End"
             
